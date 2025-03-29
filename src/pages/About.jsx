@@ -25,7 +25,7 @@ export function About() {
     <>
       <div className="relative flex h-[110vh] content-center items-center justify-center overflow-hidden">
         <Grid container spacing={3} style={{ padding: "40px", fontFamily: "bodoni-moda,bodoni moda,serif" }}>
-          <Grid md={6} xs={12}><img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/8985b735790755.5703eb0187e29.jpg" className="img-responsive" alt="" />{" "}</Grid>
+          <Grid md={6} xs={12}><img src="/img/aboutImg.png" className="img-responsive" alt="" />{" "}</Grid>
           <Grid md={6} xs={12}>
             <div style={{ padding: "40px" }}>
             <Typography style={{ fontSize: "40px", color: "#000000", fontFamily: "bodoni-moda,bodoni moda,serif" }}>About Us</Typography>

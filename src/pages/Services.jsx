@@ -5,7 +5,7 @@ import { Card, CardMedia, Typography, CardContent, Grid, Box, useTheme } from '@
 const serviceData = [
     {
         title: "Professional Makeup",
-        img: "https://tse3.mm.bing.net/th?id=OIP.xk34MZB0BktPuQz3XdR97gHaHa&pid=Api&P=0&h=180",
+        img: "/img/makeup.png",
         tags: [
             "Bridal Makeup",
             "Party Makeup",
@@ -18,7 +18,7 @@ const serviceData = [
     },
     {
         title: "Haircut Services",
-        img: "https://tse1.mm.bing.net/th?id=OIP.5p-0kylUZI7AhbNaKxbPtAHaE7&pid=Api&P=0&h=180",
+        img: "/img/haircut.png",
         tags: [
             "Eyebrows Threading",
             "Eyebrows Tinting",
@@ -31,7 +31,7 @@ const serviceData = [
     },
     {
         title: "Lashes",
-        img: "https://tse1.mm.bing.net/th?id=OIP.5p-0kylUZI7AhbNaKxbPtAHaE7&pid=Api&P=0&h=180",
+        img: "/img/eyelashes.png",
         tags: [
             "Eyelashes Individual Extension",
             "Eyelashes Extension Strip",
@@ -44,7 +44,7 @@ const serviceData = [
     },
     {
         title: "Waxing",
-        img: "https://tse3.mm.bing.net/th?id=OIP.Qqf6dgSmorAFMv39NHP_JAHaE8&pid=Api&P=0&h=180",
+        img: "/img/waxing.png",
         tags: [
             "Eyebrows Waxing",
             "Forehead Waxing",
@@ -60,7 +60,7 @@ const serviceData = [
     },
     {
         title: "Facial",
-        img: "https://tse3.mm.bing.net/th?id=OIP.2lsiiUgf5zE4uGEmtDk_rgHaE8&pid=Api&P=0&h=180",
+        img: "/img/facial.png",
         tags: [
             "Eyebrows Waxing",
             "Forehead Waxing",
@@ -76,7 +76,7 @@ const serviceData = [
     },
     {
         title: "Hair Services",
-        img: "https://tse4.mm.bing.net/th?id=OIP.YWWErR6KZqyXLVyVAf1igwHaE8&pid=Api&P=0&h=180",
+        img: "/img/hairwashing.jpg",
         tags: [
             "Eyebrows Waxing",
             "Forehead Waxing",

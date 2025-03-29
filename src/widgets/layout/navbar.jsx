@@ -79,7 +79,7 @@ export function Navbar({ brandName, routes }) {
 // everestsalon18@gmail.com
 
   return (
-    <MTNavbar
+    <MTNavbar className="p-2 w-full max-w-full z-[1000]"
     style={{
       // position:"fixed",
       // left:0,

@@ -18,45 +18,22 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 
 export function Home() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const images = [
-    {
-      url: "/img/1_print.JPG",
-      // title: "Purifying Facials",
-      // subtitle: "Naturally Filtered\nPerfectly Balanced",
-      overlayText: "Purifying",
-      subText: "Facial"
-    },
-    {
-      url: "/img/IMG_2310.JPG",
-      // title: "Threading",
-      // subtitle: "",
-      overlayText: "Enchanting",
-      subText: "Eyes"
-    },
-    {
-      url: "/img/IMG_5113.JPG",
-      // title: "Threading",
-      // subtitle: "",
-      overlayText: "Enchanting",
-      subText: "Eyes"
-    }
-  ];
 
   const servicesImgs = [
     {
-      src: "https://static.wixstatic.com/media/fa1c38_26c4a5ee732b47b2acd4d735362db7da~mv2.jpg/v1/crop/x_33,y_0,w_628,h_736/fill/w_286,h_335,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/How%20Long%20Does%20Brow%20Lamination%20Last%20on%20Average_.jpg",
+      src: "/img/threading.png",
       title: "Eyebrows"
     },
     {
-      src: "https://static.wixstatic.com/media/11062b_c08353118ce849f98c46f9788443b1fe~mv2.jpg/v1/crop/x_1077,y_0,w_2845,h_3333/fill/w_286,h_335,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Laser%20Facial%20Treatment.jpg",
+      src: "/img/facial.png",
       title: "Facial"
     },
     {
-      src: "https://static.wixstatic.com/media/290cf180b80a49759532aea6aeac8855.jpg/v1/crop/x_0,y_631,w_3840,h_4498/fill/w_286,h_335,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Waxing.jpg",
+      src: "/img/waxing.png",
       title: "Waxing"
     },
     {
-      src: "https://static.wixstatic.com/media/fa1c38_a4eead9237a8429097f981ea965d30eb~mv2.jpg/v1/crop/x_0,y_24,w_735,h_861/fill/w_286,h_335,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/download%20(7)_edited.jpg",
+      src: "/img/eyelashes.png",
       title: "Lashes"
     },
     {
@@ -69,106 +46,62 @@ export function Home() {
     }
   ]
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000); // Change every 1 second
-    return () => clearInterval(interval);
-  }, [images.length]);
-
   return (
     <>
       <div className="relative flex h-[80vh] content-center items-center justify-center overflow-hidden">
-        {/* Background images with transition effect */}
-        {images.map((image, index) => (
-          <div
-            key={index}
-            className={`absolute top-0 left-0 w-full h-full transition-opacity duration-1000 ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'
-              }`}
-          >
-            <img
-              src={image.url}
-              className="w-full h-full object-cover brightness-110" // Added brightness-110
-              style={{ backgroundColor: "#99c3d5" }}
-              alt=""
-            />
-            {/* Overlay text remains the same */}
-            {/* <div className="absolute inset-0 flex flex-col items-center justify-center z-30 space-y-4">
-              <Typography
-                variant="h1"
-                className="text-white font-black text-5xl md:text-6xl lg:text-7xl text-center"
-              >
-                {image.overlayText}
-              </Typography>
-              <Typography
-                variant="h4"
-                className="text-white font-bold text-2xl md:text-3xl lg:text-4xl text-center"
-              >
-                {image.subText}
-              </Typography>
-            </div> */}
-          </div>
-        ))}
-
-        {/* Dark overlay */}
         <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 z-10"></div>
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute top-0 left-0 w-full h-full object-cover z-0 brightness-125" // Increased brightness
+        >
+          <source src="/img/Video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
 
-        {/* Content that stays consistent */}
-        <div className="max-w-8xl container relative mx-auto z-20" style={{ paddingTop: "30px" }}>
-          <Grid container spacing={4} alignItems="center" justifyContent="center">
-            <Grid item md={6} xs={12} className="text-center lg:text-left" sx={{ color: "#FEFFFF" }}>
-              <Typography
-                variant="h1"
-                className="mb-6 font-black text-5xl md:text-6xl lg:text-7xl"
-              >
-                {images[currentImageIndex].title}
-              </Typography>
-              {images[currentImageIndex].subtitle && (
-                <Typography
-                  variant="h4"
-                  className="mb-6 font-bold text-2xl md:text-3xl lg:text-4xl"
-                >
-                  {images[currentImageIndex].subtitle.split('\n').map((line, i) => (
-                    <React.Fragment key={i}>
-                      {line}
-                      <br />
-                    </React.Fragment>
-                  ))}
-                </Typography>
-              )}
-            </Grid>
-          </Grid>
-        </div>
       </div>
 
       <div>
-        <Typography style={{ fontSize: "66px", color: "#000000", textAlign: "center", fontFamily: "bodoni-moda,bodoni moda,serif", marginTop:"40px" }}>
+        <Typography style={{ fontSize: "66px", color: "#000000", textAlign: "center", fontFamily: "bodoni-moda,bodoni moda,serif", marginTop: "40px" }}>
           Services
         </Typography>
       </div>
       <div style={{ backgroundColor: "#edd5d5", marginLeft: "60px", marginRight: "60px" }}>
         <div style={{ padding: "20px" }}>
           <Grid container spacing={3}>
-            
-          
-          {
-            servicesImgs.map((el, i) => (
-              <Grid item md={4} sm={2} sx={12}>
-              <Card sx={{ maxWidth: 345 }}>
-                <CardHeader
-                  title={el.title}
-                  // subheader="September 14, 2016"
-                />
-                <CardMedia
-                  component="img"
-                  height="194"
-                  image={el.src}
-                  alt="Paella dish"
-                />
-              </Card>
+            {
+              servicesImgs.map((el, i) => (
+                <Grid item key={i} xs={12} sm={6} md={4}>
+                <Card sx={{ 
+                  height: '100%',
+                  display: 'flex',
+                  flexDirection: 'column'
+                }}>
+                  <CardMedia
+                    component="img"
+                    sx={{
+                      height: 240, // Fixed height for all images
+                      objectFit: 'cover' // Ensures images fill space while maintaining aspect ratio
+                    }}
+                    image={el.src}
+                    alt={el.title}
+                  />
+                  <CardHeader
+                    title={el.title}
+                    titleTypographyProps={{
+                      variant: 'h6',
+                      align: 'center'
+                    }}
+                    sx={{
+                      flexGrow: 1 // Makes header take remaining space
+                    }}
+                  />
+                </Card>
               </Grid>
-            ))
-          }
+              ))
+            }
           </Grid>
         </div>
       </div>
