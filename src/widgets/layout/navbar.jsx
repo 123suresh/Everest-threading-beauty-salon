@@ -54,7 +54,7 @@ export function Navbar({ brandName, routes }) {
               style={({ isActive }) => ({
                 color: "#000",
                 textDecorationLine: "none",
-                fontWeight: "400",
+                fontWeight: "200",
                 fontSize: "16px",
                 letterSpacing: ".1em",
                 color: "#000",
@@ -91,7 +91,7 @@ export function Navbar({ brandName, routes }) {
         {/* Logo on the Left */}
         <Link to="/">
           <Typography>
-            <img src="/img/Himali-Water.png" width="80px" height="auto" alt="Everest Logo" />
+            <img src="/img/blackLogo1.png" width="80px" height="auto" alt="Everest Logo" />
           </Typography>
         </Link>
 
@@ -117,7 +117,7 @@ export function Navbar({ brandName, routes }) {
       </div>
 
       <MobileNav
-        className="rounded-xl bg-white px-4 text-blue-gray-900"
+        // className="rounded-xl bg-white px-4 text-blue-gray-900"
         open={openNav}
         sx={{backgroundColor:"#3AAFA9"}}
       >

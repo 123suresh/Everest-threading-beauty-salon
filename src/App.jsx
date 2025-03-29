@@ -8,12 +8,12 @@ function App() {
   return (
     <>
       {/* Navbar with fixed positioning and gray background */}
-      <div className="w-full fixed top-0 z-50 shadow-sm"> {/* Changed to bg-gray-100 */}
+      <div className="w-full fixed top-0 z-50 shadow-sm" style={{fontFamily: "Arial,Helvetica,sans-serif"}}> {/* Changed to bg-gray-100 */}
         <Navbar routes={routes} />
       </div>
 
       {/* Main content with proper padding to account for fixed navbar */}
-      <div className="pt-[80px] min-h-screen"> {/* Adjusted padding */}
+      <div className="pt-[75px] min-h-screen" style={{fontFamily: "Arial,Helvetica,sans-serif"}}> {/* Adjusted padding */}
         <Routes>
           {routes.map(
             ({ path, element }, key) =>

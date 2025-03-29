@@ -2,7 +2,7 @@
 
 import Home from "./pages/home";
 import Contact from "./pages/Contact";
-import Product from "./pages/Product";
+import About from "./pages/About";
 
 
 export const routes = [
@@ -12,9 +12,14 @@ export const routes = [
     element: <Home />,
   },
   {
-    name: "Product",
+    name: "About Us",
     path: "/product",
-    element: <Product/>,
+    element: <About/>,
+  },
+  {
+    name: "Our Services",
+    path: "/product",
+    element: <About/>,
   },
   {
     name: "Contact",
