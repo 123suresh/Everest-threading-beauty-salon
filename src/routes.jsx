@@ -3,6 +3,7 @@
 import Home from "./pages/home";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
+import Services from "./pages/Services";
 
 
 export const routes = [
@@ -18,8 +19,8 @@ export const routes = [
   },
   {
     name: "Our Services",
-    path: "/product",
-    element: <About/>,
+    path: "/service",
+    element: <Services/>,
   },
   {
     name: "Contact",

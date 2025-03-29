@@ -1,19 +1,40 @@
 import React, { useState, useEffect } from "react";
 import { Typography } from "@material-tailwind/react";
 import { Box, Grid } from "@mui/material";
+import { styled } from '@mui/material/styles';
+import Card from '@mui/material/Card';
+import CardHeader from '@mui/material/CardHeader';
+import CardMedia from '@mui/material/CardMedia';
+import CardContent from '@mui/material/CardContent';
+import CardActions from '@mui/material/CardActions';
+import Collapse from '@mui/material/Collapse';
+import Avatar from '@mui/material/Avatar';
+import IconButton from '@mui/material/IconButton';
+import { red } from '@mui/material/colors';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import ShareIcon from '@mui/icons-material/Share';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import MoreVertIcon from '@mui/icons-material/MoreVert';
 
 export function Home() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const images = [
     {
-      url: "https://cherryontopblog.com/wp-content/uploads/2022/07/engin-akyurt-g-m8EDc4X6Q-unsplash.jpg",
+      url: "/img/1_print.JPG",
       // title: "Purifying Facials",
       // subtitle: "Naturally Filtered\nPerfectly Balanced",
       overlayText: "Purifying",
       subText: "Facial"
     },
     {
-      url: "https://www.allurasalonsuites.com/wp-content/uploads/2020/07/Eyebrow-Threading@2x-1.jpg",
+      url: "/img/IMG_2310.JPG",
+      // title: "Threading",
+      // subtitle: "",
+      overlayText: "Enchanting",
+      subText: "Eyes"
+    },
+    {
+      url: "/img/IMG_5113.JPG",
       // title: "Threading",
       // subtitle: "",
       overlayText: "Enchanting",
@@ -72,7 +93,7 @@ export function Home() {
               alt=""
             />
             {/* Overlay text remains the same */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center z-30 space-y-4">
+            {/* <div className="absolute inset-0 flex flex-col items-center justify-center z-30 space-y-4">
               <Typography
                 variant="h1"
                 className="text-white font-black text-5xl md:text-6xl lg:text-7xl text-center"
@@ -85,14 +106,12 @@ export function Home() {
               >
                 {image.subText}
               </Typography>
-            </div>
+            </div> */}
           </div>
         ))}
 
         {/* Dark overlay */}
         <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 z-10"></div>
-
-
 
         {/* Content that stays consistent */}
         <div className="max-w-8xl container relative mx-auto z-20" style={{ paddingTop: "30px" }}>
@@ -117,34 +136,39 @@ export function Home() {
                   ))}
                 </Typography>
               )}
-              {/* <Typography variant="lead" className="opacity-80 text-lg md:text-xl">
-                Pure, refreshing, and enriched with essential minerals, Himali Water is the perfect
-                choice for healthy hydration. Sourced from nature and carefully purified, it delivers
-                crisp taste and nourishment in every sip!
-              </Typography> */}
             </Grid>
           </Grid>
         </div>
       </div>
 
       <div>
-        <Typography style={{ fontSize: "66px", color: "#000000", textAlign: "center", fontFamily: "bodoni-moda,bodoni moda,serif" }}>
+        <Typography style={{ fontSize: "66px", color: "#000000", textAlign: "center", fontFamily: "bodoni-moda,bodoni moda,serif", marginTop:"40px" }}>
           Services
         </Typography>
       </div>
       <div style={{ backgroundColor: "#edd5d5", marginLeft: "60px", marginRight: "60px" }}>
         <div style={{ padding: "20px" }}>
-          <Grid container spacing={2}>
-            {
-              servicesImgs.map((el, i) => (
-                <Grid item md={4} sm={6} sx={12} style={{ padding: "30px" }}>
-                  <div>
-                    <img src={el.src} />
-                    <span style={{ fontSize: "20px", color: "black", backgroundColor: "#fff", padding: "20px" }}>{el.title}</span>
-                  </div>
-                </Grid>
-              ))
-            }
+          <Grid container spacing={3}>
+            
+          
+          {
+            servicesImgs.map((el, i) => (
+              <Grid item md={4} sm={2} sx={12}>
+              <Card sx={{ maxWidth: 345 }}>
+                <CardHeader
+                  title={el.title}
+                  // subheader="September 14, 2016"
+                />
+                <CardMedia
+                  component="img"
+                  height="194"
+                  image={el.src}
+                  alt="Paella dish"
+                />
+              </Card>
+              </Grid>
+            ))
+          }
           </Grid>
         </div>
       </div>
