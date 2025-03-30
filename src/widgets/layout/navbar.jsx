@@ -59,7 +59,9 @@ export function Navbar({ brandName, routes }) {
                 letterSpacing: ".1em",
                 color: "#000",
                 fontStyle: "normal",
-                fontFamily: "futura-lt-w01-light,futura-lt-w05-light,sans-serif"
+                fontFamily: "futura-lt-w01-light,futura-lt-w05-light,sans-serif",
+                color: isActive ? "#3AAFA9" : "#17252A",
+                textDecoration: isActive && "underline"
               })}
             >
               {icon &&

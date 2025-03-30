@@ -109,11 +109,7 @@ function Services() {
                 Our Services
             </Typography>
             
-            <Grid container spacing={4} justifyContent="center" sx={{
-                maxWidth: '1200px',
-                margin: '0 auto',
-                px: 2
-            }}>
+            <Grid container spacing={4} justifyContent="center">
                 {serviceData.map((service, index) => (
                     <Grid item key={index} xs={12} sm={6} md={4}>
                         <Card sx={{ 

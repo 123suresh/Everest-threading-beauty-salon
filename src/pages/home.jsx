@@ -1,23 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Typography } from "@material-tailwind/react";
 import { Box, Grid } from "@mui/material";
-import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
-import CardContent from '@mui/material/CardContent';
-import CardActions from '@mui/material/CardActions';
-import Collapse from '@mui/material/Collapse';
-import Avatar from '@mui/material/Avatar';
-import IconButton from '@mui/material/IconButton';
-import { red } from '@mui/material/colors';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import ShareIcon from '@mui/icons-material/Share';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
 
 export function Home() {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const servicesImgs = [
     {
@@ -46,6 +36,9 @@ export function Home() {
     }
   ]
 
+  const theme = useTheme();
+  const isMobileView = useMediaQuery(theme.breakpoints.down("md"));
+
   return (
     <>
       <div className="relative flex h-[80vh] content-center items-center justify-center overflow-hidden">
@@ -68,7 +61,7 @@ export function Home() {
           Services
         </Typography>
       </div>
-      <div style={{ backgroundColor: "#edd5d5", marginLeft: "60px", marginRight: "60px" }}>
+      <div style={{ backgroundColor: "#edd5d5", marginLeft: `${isMobileView?"5px":"60px"}`, marginRight: `${isMobileView?"5px":"60px"}` }}>
         <div style={{ padding: "20px" }}>
           <Grid container spacing={3}>
             {
@@ -82,8 +75,8 @@ export function Home() {
                   <CardMedia
                     component="img"
                     sx={{
-                      height: 240, // Fixed height for all images
-                      objectFit: 'cover' // Ensures images fill space while maintaining aspect ratio
+                      height: 240,
+                      objectFit: 'cover'
                     }}
                     image={el.src}
                     alt={el.title}
@@ -95,7 +88,7 @@ export function Home() {
                       align: 'center'
                     }}
                     sx={{
-                      flexGrow: 1 // Makes header take remaining space
+                      flexGrow: 1
                     }}
                   />
                 </Card>
@@ -108,14 +101,11 @@ export function Home() {
 
 
       <Box sx={{ py: 8, px: 2 }}>
-        {/* Contact Us Heading */}
         <Typography style={{ fontSize: "66px", color: "#000000", textAlign: "center", fontFamily: "bodoni-moda,bodoni moda,serif" }}>
           Contact Us
         </Typography>
 
-        {/* Contact Information Grid */}
         <Grid container spacing={4} justifyContent="space-around" alignContent="center" textAlign="center" alignItems="center">
-          {/* Address Section */}
           <Grid item xs={12} md={4}>
             <Box sx={{ textAlign: { xs: "center", md: "left" } }}>
               <Typography
@@ -176,9 +166,6 @@ export function Home() {
             </Box>
           </Grid>
         </Grid>
-
-        {/* <div style={{marginTop:"30px"}}><iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=1929%20Baltimore-Reynoldsburg%20Rd%20Reynoldsburg,%20OH%2043068+(Everest%20Multi%20Tech)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/">cat gps tracker</a></iframe></div> */}
-
       </Box>
 
     </>

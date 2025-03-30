@@ -4,7 +4,7 @@ import DoneIcon from '@mui/icons-material/Done';
 
 export function About() {
   const theme = useTheme();
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
+  const isMobileView = useMediaQuery(theme.breakpoints.down("md"));
 
   const paragraph = "Welcome to Everest Threading & Beauty Salon, your ultimate destination for beauty and style! We specialize in a wide range of services, including professional makeup, trendy haircuts for boys and girls, expert threading for girls, stunning nail treatments, and vibrant hair coloring. Our team of skilled professionals is dedicated to enhancing your natural beauty and providing a relaxing, luxurious experience. Whether you're looking for a fresh new look or a special makeover, Everest Beauty Salon is here to bring your beauty vision to life. Step in and let us pamper you with the best in beauty care!"
 
@@ -24,7 +24,7 @@ export function About() {
   return (
     <>
       <div className="relative flex h-[110vh] content-center items-center justify-center overflow-hidden">
-        <Grid container spacing={3} style={{ padding: "40px", fontFamily: "bodoni-moda,bodoni moda,serif" }}>
+        <Grid container spacing={3} style={{ padding: "40px", fontFamily: "bodoni-moda,bodoni moda,serif",paddingTop:`${isMobileView&&"250px"}` }}>
           <Grid md={6} xs={12}><img src="/img/aboutImg.png" className="img-responsive" alt="" />{" "}</Grid>
           <Grid md={6} xs={12}>
             <div style={{ padding: "40px" }}>

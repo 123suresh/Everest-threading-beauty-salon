@@ -2,7 +2,7 @@ import { useState } from "react";
 import emailjs from "emailjs-com";
 import React from "react";
 import { Typography } from "@material-tailwind/react";
-import { TextField, Grid, Button } from '@mui/material';
+import { TextField, Grid, Button, useTheme, useMediaQuery } from '@mui/material';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 
 const initialState = {
@@ -13,6 +13,9 @@ const initialState = {
 const Contact = (props) => {
     const [{ name, email, message }, setState] = useState(initialState);
 
+    const theme = useTheme();
+    const isMobileView = useMediaQuery(theme.breakpoints.down("md"));
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setState((prevState) => ({ ...prevState, [name]: value }));
@@ -22,9 +25,7 @@ const Contact = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(name, email, message);
-
-        {/* replace below with your own Service ID, Template ID and Public Key from your EmailJS account */ }
+        console.log(name, email, message)
 
         emailjs
             .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", e.target, "YOUR_PUBLIC_KEY")
@@ -40,7 +41,7 @@ const Contact = (props) => {
     };
     return (
         <div className="relative flex h-[150vh] content-center items-center justify-center overflow-hidden" style={{ background: "linear-gradient(to right, rgb(202, 207, 251) 0%, rgb(108, 169, 236) 100%)" }}>
-            <div className="container" style={{ marginTop: "40px" }}>
+            <div className="container" style={{ marginTop: "40px", paddingLeft:`${isMobileView&&"20px"}`,paddingRight:`${isMobileView&&"20px"}` }}>
 
                 <Grid container spacing={3}>
                     <Grid item md={8} sm={6} xs={12}>
@@ -51,15 +52,15 @@ const Contact = (props) => {
                                 get back to you as soon as possible.
                             </p>
                         </div>
-                        <form name="sentMessage" validate onSubmit={handleSubmit} style={{ background: "#fff", padding: "20px" }}>
+                        <form name="sentMessage" validate onSubmit={handleSubmit} style={{ background: "#fff", padding: "20px", marginTop:`${isMobileView&&"60px"}` }}>
 
                             <Grid container spacing={4} direction="column">
                                 <Grid item>
                                     <Grid container spacing={3}>
-                                        <Grid item md={6}>
+                                        <Grid item md={6} sm={12} xs={12}>
                                             <TextField id="outlined-basic" label="Name" variant="outlined" fullWidth />
                                         </Grid>
-                                        <Grid item md={6}>
+                                        <Grid item md={6} sm={12} xs={12}>
                                             <TextField id="outlined-basic" label="Email" variant="outlined" fullWidth />
                                         </Grid>
                                     </Grid>
@@ -68,11 +69,9 @@ const Contact = (props) => {
                                     <Grid container spacing={3} >
                                         <Grid item md={12} xs={12}>
                                             <TextField
-                                                //   id="filled-multiline-static"
                                                 label="Message"
                                                 multiline
                                                 rows={4}
-                                                //   defaultValue="Default Value"
                                                 variant="filled"
                                                 fullWidth
                                             />
