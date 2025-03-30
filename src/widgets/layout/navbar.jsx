@@ -76,19 +76,8 @@ export function Navbar({ brandName, routes }) {
     </ul>
   );
 
-//   everest threading & beauty salon
-// 614 604 6785
-// everestsalon18@gmail.com
-
   return (
-    <MTNavbar className="p-2 w-full max-w-full z-[1000]"
-    style={{
-      // position:"fixed",
-      // left:0,
-      // right:0,
-      // backgroundColor:"#823a3a00"
-    }}
-    >
+    <MTNavbar className="p-2 w-full max-w-full z-[1000]">
       <div className="flex items-center justify-between w-full" style={{ color: "black" }}>
         {/* Logo on the Left */}
         <Link to="/">
