@@ -92,7 +92,7 @@ const Contact = (props) => {
                         <Grid item>                            
                             <Grid container spacing={1} direction="column">
                                 <Grid item><span><i className="fa fa-map-marker"></i> Address</span></Grid>
-                                <Grid item>1929 State Route 256 Reproldsburg, Ohio 43068, United States </Grid>
+                                <Grid item>1927 Baltimore-Reynoldsburg Rd, Reynoldsburg, OH 43068</Grid>
                             </Grid> 
                             </Grid>
                             <Grid item>

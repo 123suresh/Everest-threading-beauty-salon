@@ -129,8 +129,8 @@ export function Home() {
                 Address
               </Typography>
               <Typography sx={{ fontSize: "18px" }}>
-                1929 State Route 256<br />
-                Reproldsburg, Ohio 43068,<br />
+                1927 Baltimore-Reynoldsburg Rd, <br />
+                Reynoldsburg, OH 43068<br />
                 United States
               </Typography>
             </Box>

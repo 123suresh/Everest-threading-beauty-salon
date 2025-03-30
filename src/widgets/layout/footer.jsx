@@ -14,7 +14,7 @@ export function Footer({ title, description, socials, menus, copyright }) {
             <img src="/img/blackLogo1.png" width="160px" height="auto" alt="Everest Logo" />
           </div>
           <div style={{fontFamily: "futura-lt-w01-book,futura-lt-w05-book,sans-serif", textAlign:"center"}}>
-            <Typography>1929 State Route 256 Reproldsburg, Ohio 43068, United States</Typography>
+            <Typography>1927 Baltimore-Reynoldsburg Rd, Reynoldsburg, OH 43068, United States</Typography>
             <Typography>614 604 6785</Typography>
             <Typography>Everestsalon18@gmail.com</Typography>
           </div>
