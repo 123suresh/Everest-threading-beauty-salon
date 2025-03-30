@@ -103,7 +103,7 @@ const Contact = (props) => {
                         <Grid item>                           
                              <Grid container spacing={1} direction="column">
                                 <Grid item><span><MailOutlineIcon/> Email</span></Grid>
-                                <Grid item>Everestsalon18@gmail.com</Grid>
+                                <Grid item>everestsalon18@gmail.com</Grid>
                             </Grid></Grid>
                         </Grid>
                     </Grid>

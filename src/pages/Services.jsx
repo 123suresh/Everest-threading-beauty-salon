@@ -20,13 +20,12 @@ const serviceData = [
         title: "Haircut Services",
         img: "/img/haircut.png",
         tags: [
-            "Eyebrows Threading",
-            "Eyebrows Tinting",
-            "Eyelash Tinting",
-            "Eyebrow & Upperlip Threading",
-            "Eyebrow, Lip & Chin Threading",
-            "Forehead Threading",
-            "Chin Threading"
+            "Men's Haircut",
+            "Kids Haircut",
+            "Men's Beard",
+            "Men's Hair Lines",
+            "Hair Wash",
+            "Edge Up"
         ]
     },
     {
@@ -62,32 +61,27 @@ const serviceData = [
         title: "Facial",
         img: "/img/facial.png",
         tags: [
-            "Eyebrows Waxing",
-            "Forehead Waxing",
-            "Upper Lip Waxing",
-            "Chin Waxing",
-            "Side Burn Waxing",
-            "Neck Waxing",
-            "Full Face Waxing with Eyebrows",
-            "Underarm Waxing",
-            "Half Arms Waxing",
-            "Full Arms Waxing"
+            "Gold facial",
+            "Anti Aging Facial",
+            "Herbal Facial",
+            "Diamond Facial",
+            "Mini Facial",
+            "Skin Polish",
+            "Dermaplane"
         ]
     },
     {
         title: "Hair Services",
         img: "/img/hairwashing.jpg",
         tags: [
-            "Eyebrows Waxing",
-            "Forehead Waxing",
-            "Upper Lip Waxing",
-            "Chin Waxing",
-            "Side Burn Waxing",
-            "Neck Waxing",
-            "Full Face Waxing with Eyebrows",
-            "Underarm Waxing",
-            "Half Arms Waxing",
-            "Full Arms Waxing"
+            "Blow Dry",
+            "Men's Cut & Wash",
+            "Permanent Hair Straightening",
+            "Full Heighlight",
+            "Men's Cut & Color",
+            "Partial Highlight",
+            "Women's Hair Cut",
+            "Womens Cut & Blow Dry"
         ]
     }
 ];

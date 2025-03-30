@@ -16,7 +16,7 @@ export function Footer({ title, description, socials, menus, copyright }) {
           <div style={{fontFamily: "futura-lt-w01-book,futura-lt-w05-book,sans-serif", textAlign:"center"}}>
             <Typography>1927 Baltimore-Reynoldsburg Rd, Reynoldsburg, OH 43068, United States</Typography>
             <Typography>614 604 6785</Typography>
-            <Typography>Everestsalon18@gmail.com</Typography>
+            <Typography>everestsalon18@gmail.com</Typography>
           </div>
         </div>
 
